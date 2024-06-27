@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
   }
 })
 
-app.use("/test", (req,res)=>{
+app.use("/", (req,res)=>{
   res.send("hello")
 })
 
