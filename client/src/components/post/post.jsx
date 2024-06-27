@@ -66,7 +66,7 @@ import { AuthContext } from "../../context/authcontext";
                 </div>
                 <div className="postcenter">
                     <span className="posttext">{post.desc}</span>
-                    {post.img && <img className="postimg" src={`https://front-ivory-omega.vercel.app/images/${post.img}`} alt="Posted" />}
+                    {post.img && <img className="postimg" src={`https://back-cyan-psi.vercel.app/images/${post.img}`} alt="Posted" />}
                 </div>
                 <div className="postbottom">
                     <div className="postbottomleft">
