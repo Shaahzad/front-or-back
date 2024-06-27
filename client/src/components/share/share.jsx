@@ -30,13 +30,13 @@ if (file) {
  newPost.img = filename;      
  console.log(newPost);
 try {
-   await axios.post("http://localhost:8800/api/upload", Data)
+   await axios.post("https://back-cyan-psi.vercel.app/api/upload", Data)
 } catch (error) {
    console.log(error);
 } 
 }
 try {
-  await axios.post("http://localhost:8800/api/post",newPost)
+  await axios.post("https://back-cyan-psi.vercel.app/api/post",newPost)
   window.location.reload()
 } catch (error) {
    console.log(error);

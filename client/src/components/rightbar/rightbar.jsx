@@ -18,13 +18,13 @@ const [followed,setfollowed] = useState(currentUser.followings.includes(user?.id
 const Handleclick = async () => {
     try {
         if (followed) {
-            await axios.put("http://localhost:8800/api/user/" + user._id + "/unfollow", {userId:currentUser._id})
+            await axios.put("https://back-cyan-psi.vercel.app/api/user/" + user._id + "/unfollow", {userId:currentUser._id})
             dispatch({type: "UNFOLLOW", payload: user._id})
 
         }
 
           else {
-            await axios.put("http://localhost:8800/api/user/" + user._id + "/follow", {userId:currentUser._id})
+            await axios.put("https://back-cyan-psi.vercel.app/api/user/" + user._id + "/follow", {userId:currentUser._id})
             dispatch({type: "FOLLOW", payload: user._id})
         }
     } catch (error) {
@@ -44,7 +44,7 @@ useEffect(() => {
     const getfriends = async () => {
         if (user?._id) {
             try {
-                const res = await axios.get("http://localhost:8800/api/user/friends/" + user._id);
+                const res = await axios.get("https://back-cyan-psi.vercel.app/api/user/friends/" + user._id);
                 setfriends(res.data)
             } catch (error) {
                 console.log(error);

@@ -23,7 +23,7 @@ else{
         password:  Password.current.value,
     }
     try {
-        await axios.post("http://localhost:8800/api/auth/register", user)
+        await axios.post("https://back-cyan-psi.vercel.app/api/auth/register", user)
         Navigate("/login")
     } 
     catch (error) {

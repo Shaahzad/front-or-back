@@ -27,7 +27,7 @@ import { AuthContext } from "../../context/authcontext";
     useEffect(() => {
         const fetchuser = async () => {
             try {
-                const res = await axios.get(`http://localhost:8800/api/user?userId=${post.userId}`);
+                const res = await axios.get(`https://back-cyan-psi.vercel.app/api/user?userId=${post.userId}`);
                 setUser(res.data)
     
             } catch (error) {
@@ -41,7 +41,7 @@ import { AuthContext } from "../../context/authcontext";
     const likeHandler = () => {
 
       try {
-        axios.put("http://localhost:8800/api/post/" + post._id + "/like", {userId:currentuser._id})
+        axios.put("https://back-cyan-psi.vercel.app/api/post/" + post._id + "/like", {userId:currentuser._id})
       } catch (error) {
         
       }
@@ -66,7 +66,7 @@ import { AuthContext } from "../../context/authcontext";
                 </div>
                 <div className="postcenter">
                     <span className="posttext">{post.desc}</span>
-                    {post.img && <img className="postimg" src={`http://localhost:8800/images/${post.img}`} alt="Posted" />}
+                    {post.img && <img className="postimg" src={`https://back-cyan-psi.vercel.app/images/${post.img}`} alt="Posted" />}
                 </div>
                 <div className="postbottom">
                     <div className="postbottomleft">

@@ -14,7 +14,7 @@ export default function Profile(){
 
   useEffect(() => {
     const fetchuser = async () => {
-       const res = await axios.get(`http://localhost:8800/api/user?username=${username}`);
+       const res = await axios.get(`https://back-cyan-psi.vercel.app/api/user?username=${username}`);
       setUser(res.data);
     }
     fetchuser();

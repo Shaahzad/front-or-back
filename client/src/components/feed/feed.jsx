@@ -11,8 +11,8 @@ const {user} = useContext(AuthContext)
 useEffect(() => {
   const fetchPosts = async () => {
   const res = username ? 
-  await axios.get("http://localhost:8800/api/post/profile/" + username) :
-  await axios.get("http://localhost:8800/api/post/timeline/" + user._id)
+  await axios.get("https://back-cyan-psi.vercel.app/api/post/profile/" + username) :
+  await axios.get("https://back-cyan-psi.vercel.app/api/post/timeline/" + user._id)
    setPosts(res.data.sort((a,b) => {
     return new Date(b.createdAt) - new Date(a.createdAt)
    }))
