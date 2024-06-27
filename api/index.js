@@ -27,7 +27,10 @@ Dbconnect();
 app.use("/images", express.static(path.join(__dirname, "public/images")))
 
 // middleware
-app.use(cors()); // CORS middleware ko pehle use karein
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+})); 
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));

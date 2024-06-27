@@ -10,6 +10,7 @@ import { AuthContext } from "./context/authcontext";
 
 function App() {
 const {user} = useContext(AuthContext)
+console.log(user)
   return (
     <>
     <Router>

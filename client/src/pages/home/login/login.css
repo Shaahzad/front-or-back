@@ -53,6 +53,7 @@ margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    outline: none;
 }
 .loginbutton:disabled{
 cursor: not-allowed;

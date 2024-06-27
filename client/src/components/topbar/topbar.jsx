@@ -12,6 +12,11 @@ import {AuthContext} from "../../context/authcontext"
 export default function Topbar(){
 const {user} = useContext(AuthContext)
 
+const Signout = ()=>{
+    localStorage.clear()
+    window.location.reload()
+}
+
 
     return(
         <div className="topbarcontainer">
@@ -47,6 +52,9 @@ const {user} = useContext(AuthContext)
     </div>
     <Link to={`/profile/${user.username}`}>
     <img src={user.profilePicture ? user.profilePicture : "../src/assets/no avatar.png" } alt="hi" className="topbarimage"/>
+    </Link>
+    <Link to={"/login"}>
+    <button className="topbarlogout" onClick={Signout}>Logout</button>
     </Link>
 </div>
    </div>

@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import "./login.css";
 import { logincall } from "../../../apicall";
 import { AuthContext } from "../../../context/authcontext";
+import { Link } from "react-router-dom";
 
 export default function Login() {
 const email = useRef()
@@ -31,9 +32,11 @@ console.log(user);
                 <input  placeholder="Password" type="password" minLength={6} className="logininput" required ref={password}  />
                  <button className="loginbutton" disabled={isfetching}>{isfetching ? "Loading":"Login"}</button>
                  <span className="loginforgot">Forgot Password?</span>
+                 <Link to="/register">
                  <button className="loginregisterbutton">
-                 {isfetching ? "Loading":"Create anew Account"}
+                 {isfetching ? "Loading":"Create new Account"}
                  </button>
+                 </Link>
             </form>
         </div>
     </div>
