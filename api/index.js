@@ -28,7 +28,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")))
 
 // middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://front-ivory-omega.vercel.app",
   credentials: true
 })); 
 app.use(express.json());
