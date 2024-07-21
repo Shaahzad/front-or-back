@@ -48,7 +48,7 @@ try {
         <div className="sharewrapper">
             <div className="sharetop">
             <img src={user.profilePicture ? user.profilePicture : "./src/assets/no avatar.png"} alt="" className="shareprofileimg" />
-            <input placeholder={"What's in your mind " + user.username + "?"} ref={desc} className="shareinput" />
+            <input placeholder={"What's in your mind " + user?.username + "?"} ref={desc} className="shareinput" />
             </div>
             <hr className="sharehr"/>
             {file && (
