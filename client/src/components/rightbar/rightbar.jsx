@@ -12,7 +12,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 export default function Rightbar({user}) {
 const [friends,setfriends] = useState([])
 const {user:currentUser, dispatch} = useContext(AuthContext)
-const [followed,setfollowed] = useState(currentUser.followings.includes(user?.id))
+const [followed,setfollowed] = useState(currentUser?.followings?.includes(user?.id))
 
 
 const Handleclick = async () => {
