@@ -21,7 +21,7 @@ import { AuthContext } from "../../context/authcontext";
 
 
     useEffect(()=>{
-        setislike(post.likes.includes(currentuser._id))
+        setislike(post?.likes?.includes(currentuser._id))
     },[currentuser._id,post.likes])
 
     useEffect(() => {

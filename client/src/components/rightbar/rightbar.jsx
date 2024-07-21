@@ -35,7 +35,7 @@ const Handleclick = async () => {
 
 
 useEffect(() => {
-    setfollowed(currentUser.followings.includes(user?.id))
+    setfollowed(currentUser?.followings?.includes(user?.id))
 },[currentUser,user?.id])
 
 
