@@ -13,7 +13,7 @@ useEffect(() => {
   const res = username ? 
   await axios.get("https://back-cyan-psi.vercel.app/api/post/profile/" + username) :
   await axios.get("https://back-cyan-psi.vercel.app/api/post/timeline/" + user._id)
-   setPosts(res.data.sort((a,b) => {
+   setPosts(res?.data?.sort((a,b) => {
     return new Date(b.createdAt) - new Date(a.createdAt)
    }))
 
